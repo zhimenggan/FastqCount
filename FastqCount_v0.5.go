@@ -7,8 +7,8 @@ import gzip "github.com/klauspost/pgzip"
 
 func Exit () {
     fmt.Println ("Usage: FastqCount  <input.fastq>  [phred]")
-    fmt.Println ("  phred default: 33;")
-    fmt.Println ("  output (tsv): Total Reads  Total Bases  N Bases  Q20  Q30  GC;") 
+    fmt.Println ("  Phred default: 33;")
+    fmt.Println ("  Output (tsv): Total Reads  Total Bases  N Bases  Q20  Q30  GC;") 
     fmt.Println ("  Note: \"pigz -dc *.fastq.gz | FastqCount -\" is recommended for gzipped file(s).")
     fmt.Println ()
     fmt.Println ("author: d2jvkpn")
@@ -63,13 +63,13 @@ func main() {
         }
     }
 
-    fmt.Println ("Total Reads\tTotal Bases\tQ20\tQ30\tN Bases\tGC")
+    fmt.Println ("Total Reads\tTotal Bases\tN Bases\tQ20\tQ30\tGC")
 
-    fmt.Printf ("%d (%.2f M)\t%d (%.2f G)\t%.2f %%\t%.2f %%\t%.2f %%\t%.2f %%\n", 
+    fmt.Printf ("%d (%.2f M)\t%d (%.2f G)\t%.2f%%\t%.2f%%\t%.2f%%\t%.2f%%\n", 
         i/4, float32 (i) / 4E+6,
         bases, float32 (bases) / 1E+9,
+        float32 (Nc*100 / bases),
         float32 (q20*100 / bases),
         float32 (q30*100 / bases),
-        float32 (Nc*100 / bases),
         float32 (gc*100 / bases))
 }
