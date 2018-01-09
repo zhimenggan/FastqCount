@@ -1,5 +1,7 @@
 # FastqCount
 
+Summary fastq reads, bases, Q20, Q30, N bases, GC.
+
 **Usage**:
 
 summary single fastq(.gz) file:
