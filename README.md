@@ -10,7 +10,7 @@ summary single fastq(.gz) file:
 multipy files:
 ```pigz -dc R1.fastq.gz R2.fastq.gz | ./FastqCount -```
 
-Note: pipeline stdin runs faster for FastqCount with gzipped file(s).
+**Note**: pipeline stdin runs faster for FastqCount with gzipped file(s).
 
 **Output** example (tsv):
 
