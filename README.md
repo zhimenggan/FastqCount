@@ -8,7 +8,7 @@ summary single fastq(.gz) file:
 
 ```./FastqCount input.fastq```
 
-multipy files:
+summary multipy files:
 
 ```pigz -dc R1.fastq.gz R2.fastq.gz | ./FastqCount -```
 
