@@ -1,6 +1,6 @@
 # FastqCount
 
-Summary fastq reads, bases, N bases, Q20, Q30, GC.
+Summary fastq Total Reads, Total Bases, N Bases, Q20, Q30, GC.
 
 **Usage**:
 
